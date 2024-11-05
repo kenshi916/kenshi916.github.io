@@ -1,38 +1,51 @@
-/* Space Background */
+/* Basic body styling */
 body {
     font-family: Arial, sans-serif;
     color: #c5c6c7;
     text-align: center;
     padding: 20px;
-    background: #000;
+    background-color: black;
     overflow: hidden;
+    position: relative;
 }
 
-/* Star field */
+/* Star styling */
 .star {
     position: absolute;
     width: 2px;
     height: 2px;
     background: white;
     border-radius: 50%;
-    animation: floatStars 20s linear infinite;
     opacity: 0.8;
+    animation: floatStars 10s linear infinite;
 }
 
-/* Star floating animation */
+/* Animation to make stars float upwards */
 @keyframes floatStars {
-    0% {
-        transform: translateY(0) translateX(0);
+    from {
+        transform: translateY(0);
     }
-    100% {
-        transform: translateY(-100vh) translateX(-100vw);
+    to {
+        transform: translateY(-100vh);
     }
 }
 
-/* Floating stars in random positions */
-.star:nth-child(1) { top: 10%; left: 20%; animation-duration: 15s; }
-.star:nth-child(2) { top: 20%; left: 80%; animation-duration: 18s; }
-.star:nth-child(3) { top: 50%; left: 50%; animation-duration: 20s; }
-.star:nth-child(4) { top: 70%; left: 30%; animation-duration: 22s; }
-.star:nth-child(5) { top: 30%; left: 60%; animation-duration: 24s; }
-/* Add more stars as needed */
+/* Character styling */
+#character {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.character-image {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Floating animation for character */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
