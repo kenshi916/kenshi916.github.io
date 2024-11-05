@@ -1,50 +1,38 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Space Background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0b0c10;
     color: #c5c6c7;
     text-align: center;
     padding: 20px;
+    background: #000;
+    overflow: hidden;
 }
 
-header, section {
-    background-color: #1f2833;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
+/* Star field */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: floatStars 20s linear infinite;
+    opacity: 0.8;
 }
 
-h1, h2 {
-    color: #66fcf1;
+/* Star floating animation */
+@keyframes floatStars {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-100vh) translateX(-100vw);
+    }
 }
 
-button {
-    background-color: #66fcf1;
-    color: #0b0c10;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a29e;
-}
-
-/* Animation for Ammo List */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-#ammo-list {
-    animation: fadeIn 1s ease-in-out;
-}
+/* Floating stars in random positions */
+.star:nth-child(1) { top: 10%; left: 20%; animation-duration: 15s; }
+.star:nth-child(2) { top: 20%; left: 80%; animation-duration: 18s; }
+.star:nth-child(3) { top: 50%; left: 50%; animation-duration: 20s; }
+.star:nth-child(4) { top: 70%; left: 30%; animation-duration: 22s; }
+.star:nth-child(5) { top: 30%; left: 60%; animation-duration: 24s; }
+/* Add more stars as needed */
