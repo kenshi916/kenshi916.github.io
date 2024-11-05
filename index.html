@@ -7,13 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Floating Photos Background -->
+    <div class="floating-photo photo1"></div>
+    <div class="floating-photo photo2"></div>
+    <div class="floating-photo photo3"></div>
+
+    <!-- Header Section -->
     <header>
         <h1>Welcome to Glort's Space Mission</h1>
-        <p>Hello, I am Glort, an intergalactic explorer on a mission to discover the mysteries of the universe!</p>
+        <p>Join Glort on his intergalactic adventure!</p>
     </header>
-    <section>
-        <h2>About Glort</h2>
-        <p>This is where you can learn more about Glort's adventures.</p>
+
+    <!-- Character Section -->
+    <section id="character">
+        <img src="character.png" alt="Glort" class="character-image">
     </section>
+
+    <!-- Interactive To-Do List -->
+    <section id="todo">
+        <h2>To-Do List</h2>
+        <ul>
+            <li>Find the nearest space station</li>
+            <li>Collect alien minerals</li>
+            <li>Analyze cosmic radiation</li>
+        </ul>
+    </section>
+
+    <!-- Interactive Alien Ammo Section -->
+    <section id="alien-ammo">
+        <h2>Alien Ammo Stock</h2>
+        <p>Click to see Glort's inventory:</p>
+        <button onclick="showAmmo()">Show Ammo</button>
+        <ul id="ammo-list" style="display: none;">
+            <li>Space Slugs</li>
+            <li>Jeet Repellent</li>
+            <li>Plasma Blaster Fuel</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
